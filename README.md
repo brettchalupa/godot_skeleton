@@ -15,7 +15,8 @@ Godot versions supported: 4.0+
 
 ## Use It
 
-- Go to https://github.com/brettchalupa/godot_skeleton
+- Go to https://github.com/brettchalupa/godot_skeleton and click "Use this template"
+- Or [download the source](https://github.com/brettchalupa/godot_skeleton/archive/refs/heads/main.zip), unzip it, and you're good to go!
 
 ## Notes
 
