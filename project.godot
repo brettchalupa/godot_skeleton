@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="GodotSkeleton"
+run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 

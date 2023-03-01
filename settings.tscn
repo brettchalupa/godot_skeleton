@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://rxdgdijyhrsb"]
+
+[ext_resource type="Script" path="res://settings/SettingsControls.gd" id="1_mmaky"]
+[ext_resource type="Script" path="res://settings/FullscreenToggle.gd" id="2_5l5tc"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.5
+offset_top = 64.0
+offset_right = 54.5
+offset_bottom = 106.0
+grow_horizontal = 2
+theme_type_variation = &"HeaderLarge"
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="SettingsControls" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = 129.0
+offset_right = 64.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+shortcut_context = NodePath("")
+alignment = 1
+script = ExtResource("1_mmaky")
+
+[node name="FullscreenToggle" type="CheckButton" parent="SettingsControls"]
+layout_mode = 2
+text = "Fullscreen"
+script = ExtResource("2_5l5tc")
+
+[node name="Back" type="Button" parent="SettingsControls"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="toggled" from="SettingsControls/FullscreenToggle" to="SettingsControls/FullscreenToggle" method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="SettingsControls/Back" to="SettingsControls" method="_on_back_pressed"]
