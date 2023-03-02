@@ -1,11 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://der7c3vl4w7qh"]
+[gd_scene load_steps=3 format=3 uid="uid://der7c3vl4w7qh"]
 
 [ext_resource type="Script" path="res://gameplay.gd" id="1_2de6v"]
+[ext_resource type="Texture2D" uid="uid://bgprycbqd2tbx" path="res://icon.svg" id="2_5h7lb"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_2de6v")
 
 [node name="Title" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 108.0
+offset_bottom = 40.0
 text = "GAMEPLAY"
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(637, 350)
+texture = ExtResource("2_5h7lb")
