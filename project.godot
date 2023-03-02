@@ -10,10 +10,16 @@ config_version=5
 
 [application]
 
-config/name="GodotSkeleton"
+config/name="Godot Skeleton"
+config/description="[Add your description here!]"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [rendering]
 
