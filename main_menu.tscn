@@ -23,7 +23,7 @@ offset_right = 65.5
 offset_bottom = 135.0
 grow_horizontal = 2
 theme_type_variation = &"HeaderLarge"
-text = "MY GAME"
+text = "YOUR GAME"
 horizontal_alignment = 1
 
 [node name="Credit" type="Label" parent="."]
