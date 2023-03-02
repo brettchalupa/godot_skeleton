@@ -4,7 +4,7 @@ extends VFlowContainer
 @export var settings_scene:PackedScene
 
 func _ready():
-	$Start.grab_focus()
+	get_children()[0].grab_focus()
 	
 	if !OS.has_feature("pc"):
 		$Quit.hide()
