@@ -10,8 +10,8 @@ func _ready():
 		
 	set_pressed_no_signal(is_fullscreen)
 
-func _on_fullscreen_toggled(button_pressed):
-	if button_pressed:
+func _on_fullscreen_toggled(bpressed):
+	if bpressed:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
