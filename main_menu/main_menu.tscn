@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://wct82kvwjcio"]
+[gd_scene load_steps=4 format=3 uid="uid://0268jtpuc6rp"]
 
-[ext_resource type="Script" path="res://MenuOptions.gd" id="1_skys7"]
-[ext_resource type="PackedScene" uid="uid://der7c3vl4w7qh" path="res://gameplay.tscn" id="2_38jke"]
-[ext_resource type="PackedScene" uid="uid://rxdgdijyhrsb" path="res://settings.tscn" id="2_wvudt"]
+[ext_resource type="Script" path="res://main_menu/MenuOptions.gd" id="1_qcgqq"]
+[ext_resource type="PackedScene" uid="uid://bdnyglk1i1cxl" path="res://gameplay/gameplay.tscn" id="2_5nvqq"]
+[ext_resource type="PackedScene" uid="uid://rxdgdijyhrsb" path="res://settings/settings.tscn" id="3_2osu0"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -52,9 +52,9 @@ grow_horizontal = 2
 grow_vertical = 2
 shortcut_context = NodePath("Start")
 alignment = 1
-script = ExtResource("1_skys7")
-gameplay_scene = ExtResource("2_38jke")
-settings_scene = ExtResource("2_wvudt")
+script = ExtResource("1_qcgqq")
+gameplay_scene = ExtResource("2_5nvqq")
+settings_scene = ExtResource("3_2osu0")
 
 [node name="Start" type="Button" parent="MenuOptions"]
 layout_mode = 2

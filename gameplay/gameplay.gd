@@ -9,4 +9,4 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if Input.is_action_pressed("ui_accept"):
-		get_tree().change_scene_to_file("res://main_menu.tscn")
+		get_tree().change_scene_to_file(Global.SCENE_MAIN_MENU)
