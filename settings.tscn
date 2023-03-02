@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://rxdgdijyhrsb"]
+[gd_scene load_steps=6 format=3 uid="uid://rxdgdijyhrsb"]
 
 [ext_resource type="Script" path="res://settings/SettingsControls.gd" id="1_mmaky"]
 [ext_resource type="Script" path="res://settings/FullscreenToggle.gd" id="2_5l5tc"]
+[ext_resource type="Script" path="res://settings/SfxToggle.gd" id="3_n6nlb"]
+[ext_resource type="Script" path="res://settings/MusicToggle.gd" id="4_s1svy"]
+[ext_resource type="Script" path="res://settings/BackButton.gd" id="5_x47bl"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -46,9 +49,22 @@ layout_mode = 2
 text = "Fullscreen"
 script = ExtResource("2_5l5tc")
 
-[node name="Back" type="Button" parent="SettingsControls"]
+[node name="SfxToggle" type="CheckButton" parent="SettingsControls"]
+layout_mode = 2
+text = "Sound Effects"
+script = ExtResource("3_n6nlb")
+
+[node name="MusicToggle" type="CheckButton" parent="SettingsControls"]
+layout_mode = 2
+text = "Music"
+script = ExtResource("4_s1svy")
+
+[node name="BackButton" type="Button" parent="SettingsControls"]
 layout_mode = 2
 text = "Back"
+script = ExtResource("5_x47bl")
 
-[connection signal="toggled" from="SettingsControls/FullscreenToggle" to="SettingsControls/FullscreenToggle" method="_on_fullscreen_toggled"]
-[connection signal="pressed" from="SettingsControls/Back" to="SettingsControls" method="_on_back_pressed"]
+[connection signal="toggled" from="SettingsControls/FullscreenToggle" to="SettingsControls/FullscreenToggle" method="_on_toggled"]
+[connection signal="toggled" from="SettingsControls/SfxToggle" to="SettingsControls/SfxToggle" method="_on_toggled"]
+[connection signal="toggled" from="SettingsControls/MusicToggle" to="SettingsControls/MusicToggle" method="_on_toggled"]
+[connection signal="pressed" from="SettingsControls/BackButton" to="SettingsControls/BackButton" method="_on_pressed"]

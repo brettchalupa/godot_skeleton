@@ -9,8 +9,11 @@ func _ready():
 		is_fullscreen = true
 		
 	set_pressed_no_signal(is_fullscreen)
+	
+	if !OS.has_feature("pc"):
+		hide()
 
-func _on_fullscreen_toggled(bpressed):
+func _on_toggled(bpressed):
 	if bpressed:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
