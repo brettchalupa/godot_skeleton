@@ -28,15 +28,31 @@ theme_type_variation = &"HeaderLarge"
 text = "Settings"
 horizontal_alignment = 1
 
+[node name="Explainer" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.500344
+anchor_top = 0.285
+anchor_right = 0.500344
+anchor_bottom = 0.285
+offset_left = -189.44
+offset_top = -26.2
+offset_right = 189.56
+offset_bottom = 25.8
+text = "Configure the game. Settings are automatically saved when changed."
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
 [node name="SettingsControls" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -63.0
-offset_top = 129.0
-offset_right = 64.0
+offset_left = -76.0
+offset_top = 234.0
+offset_right = 77.0
 offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
