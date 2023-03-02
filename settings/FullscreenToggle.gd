@@ -1,6 +1,5 @@
 extends CheckButton
 
-
 func _ready():
 	var is_fullscreen = false
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
