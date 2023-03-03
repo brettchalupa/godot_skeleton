@@ -21,33 +21,34 @@ offset_right = 1317.0
 offset_bottom = 750.0
 color = Color(0.156863, 0.396078, 0.384314, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 556.0
+offset_left = 589.0
 offset_top = 136.0
-offset_right = 654.0
+offset_right = 687.0
 offset_bottom = 178.0
 theme_type_variation = &"HeaderLarge"
 text = "Paused"
 
 [node name="Instructions" type="Label" parent="."]
 layout_mode = 0
-offset_left = 480.0
+offset_left = 513.0
 offset_top = 239.0
-offset_right = 737.0
+offset_right = 770.0
 offset_bottom = 273.0
 text = "Press START, P, or ESC to resume."
 horizontal_alignment = 1
 
 [node name="PauseOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 0
-offset_left = 532.0
+offset_left = 548.0
 offset_top = 170.0
-offset_right = 705.0
+offset_right = 721.0
 offset_bottom = 714.0
 shortcut_context = NodePath("Resume")
 alignment = 1
 script = ExtResource("2_s1e5n")
+metadata/_edit_group_ = true
 
 [node name="Resume" type="Button" parent="PauseOptions"]
 layout_mode = 2
