@@ -7,11 +7,15 @@
 script = ExtResource("1_thqv1")
 
 [node name="Title" type="Label" parent="."]
-offset_left = 23.0
-offset_top = 14.0
-offset_right = 108.0
-offset_bottom = 40.0
+anchors_preset = -1
+offset_left = 552.0
+offset_top = 71.0
+offset_right = 701.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_type_variation = &"HeaderLarge"
 text = "GAMEPLAY"
+metadata/_edit_use_anchors_ = true
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(637, 350)
