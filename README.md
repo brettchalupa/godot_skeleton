@@ -20,6 +20,7 @@ Godot versions supported: 4.0+
 
 ## Notes
 
+- Don't worry about keeping your game up to date with Godot Skeleton. It's intended to just be a starting point. When you use it again, it may have some improvements!
 - Gameplay defaults to a 2D scene, but you can easily change that for your game's needs.
 - Keyboard controls:
     - Config I:
