@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdnyglk1i1cxl"]
+[gd_scene load_steps=4 format=3 uid="uid://bdnyglk1i1cxl"]
 
 [ext_resource type="Script" path="res://gameplay/gameplay.gd" id="1_thqv1"]
 [ext_resource type="Texture2D" uid="uid://bgprycbqd2tbx" path="res://assets/icon.svg" id="2_o7ako"]
+[ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://paused/paused.tscn" id="3_w8wrl"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_thqv1")
 
 [node name="Title" type="Label" parent="."]
-anchors_preset = -1
 offset_left = 552.0
 offset_top = 71.0
 offset_right = 701.0
@@ -45,3 +45,6 @@ uri = "https://github.com/brettchalupa/godot_skeleton"
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(638, 451)
 texture = ExtResource("2_o7ako")
+
+[node name="Paused" parent="." instance=ExtResource("3_w8wrl")]
+visible = false

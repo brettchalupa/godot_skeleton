@@ -5,3 +5,12 @@ func _process(_delta):
 		get_tree().change_scene_to_file(Global.SCENE_MAIN_MENU)
 
 	$Icon.rotate(_delta)
+
+func _input(event):
+	if event.is_action_released("pause"):
+		call_deferred("_pause")
+		
+func _pause():
+	print_debug("pause!")
+	$Paused.show()
+	get_tree().paused = true

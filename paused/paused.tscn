@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://jadbqq0y2uot"]
+
+[ext_resource type="Script" path="res://paused/paused.gd" id="1_n0tpy"]
+
+[node name="Paused" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n0tpy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -24.0
+offset_right = 1317.0
+offset_bottom = 750.0
+color = Color(0.156863, 0.396078, 0.384314, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 136.0
+offset_right = 654.0
+offset_bottom = 178.0
+theme_type_variation = &"HeaderLarge"
+text = "Paused"
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 239.0
+offset_right = 737.0
+offset_bottom = 273.0
+text = "Press START, P, or ESC to resume."
+horizontal_alignment = 1

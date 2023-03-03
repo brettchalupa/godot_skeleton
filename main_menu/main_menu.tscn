@@ -40,13 +40,13 @@ text = "A game by YOU"
 
 [node name="Controls" type="Label" parent="."]
 layout_mode = 0
-offset_left = 928.0
-offset_top = 570.0
-offset_right = 1239.0
-offset_bottom = 674.0
+offset_left = 843.0
+offset_top = 573.0
+offset_right = 1251.0
+offset_bottom = 677.0
 text = "CONTROLS
-Move: WASD | Accept: J | Cancel: K
-Move: Arrow Keys | Accept: Z | Cancel: Z
+Move: WASD | Accept: J | Cancel: K | Pause: P
+Move: Arrow Keys | Accept: Z | Cancel: Z | Pause: Esc
 Gamepads work too!"
 horizontal_alignment = 2
 
