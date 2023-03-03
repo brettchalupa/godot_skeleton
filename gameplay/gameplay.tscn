@@ -13,10 +13,35 @@ offset_top = 71.0
 offset_right = 701.0
 offset_bottom = 113.0
 grow_horizontal = 2
+size_flags_horizontal = 4
 theme_type_variation = &"HeaderLarge"
 text = "GAMEPLAY"
-metadata/_edit_use_anchors_ = true
+
+[node name="Instructions" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -4.24832
+anchor_top = 0.0714286
+anchor_right = -2.92617
+anchor_bottom = 0.928571
+offset_left = 464.0
+offset_top = 145.0
+offset_right = 828.0
+offset_bottom = 221.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Get started with Godot Skeleton by replacing this Gameplay scene with your own."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="."]
+offset_left = 556.0
+offset_top = 243.0
+offset_right = 727.0
+offset_bottom = 288.0
+size_flags_horizontal = 4
+text = "View Template Source"
+uri = "https://github.com/brettchalupa/godot_skeleton"
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(637, 350)
+position = Vector2(638, 451)
 texture = ExtResource("2_o7ako")
