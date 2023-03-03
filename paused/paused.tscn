@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://jadbqq0y2uot"]
+[gd_scene load_steps=3 format=3 uid="uid://jadbqq0y2uot"]
 
 [ext_resource type="Script" path="res://paused/paused.gd" id="1_n0tpy"]
+[ext_resource type="Script" path="res://paused/Options.gd" id="2_s1e5n"]
 
 [node name="Paused" type="Control"]
 process_mode = 2
@@ -37,3 +38,29 @@ offset_right = 737.0
 offset_bottom = 273.0
 text = "Press START, P, or ESC to resume."
 horizontal_alignment = 1
+
+[node name="PauseOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 170.0
+offset_right = 705.0
+offset_bottom = 714.0
+shortcut_context = NodePath("Resume")
+alignment = 1
+script = ExtResource("2_s1e5n")
+
+[node name="Resume" type="Button" parent="PauseOptions"]
+layout_mode = 2
+text = "Resume"
+
+[node name="MainMenu" type="Button" parent="PauseOptions"]
+layout_mode = 2
+text = "Return to Main Menu"
+
+[node name="Quit" type="Button" parent="PauseOptions"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="PauseOptions/Resume" to="." method="_resume"]
+[connection signal="pressed" from="PauseOptions/MainMenu" to="PauseOptions" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="PauseOptions/Quit" to="PauseOptions" method="_on_quit_pressed"]

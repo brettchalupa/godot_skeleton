@@ -12,5 +12,5 @@ func _input(event):
 		
 func _pause():
 	print_debug("pause!")
-	$Paused.show()
+	$Paused.pause()
 	get_tree().paused = true

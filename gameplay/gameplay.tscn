@@ -33,6 +33,14 @@ text = "Get started with Godot Skeleton by replacing this Gameplay scene with yo
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="PauseInstructions" type="Label" parent="."]
+offset_left = 479.0
+offset_top = 594.0
+offset_right = 816.0
+offset_bottom = 628.0
+text = "Press START, P, or ESC to open pause menu."
+horizontal_alignment = 1
+
 [node name="LinkButton" type="LinkButton" parent="."]
 offset_left = 556.0
 offset_top = 243.0
@@ -48,3 +56,8 @@ texture = ExtResource("2_o7ako")
 
 [node name="Paused" parent="." instance=ExtResource("3_w8wrl")]
 visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
