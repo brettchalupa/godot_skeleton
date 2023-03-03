@@ -36,16 +36,16 @@ text = "Get started with Godot Skeleton by replacing this Gameplay scene with yo
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="PauseInstructions" type="Label" parent="Stack"]
+layout_mode = 2
+text = "Press START, P, or ESC to open pause menu."
+horizontal_alignment = 1
+
 [node name="LinkButton" type="LinkButton" parent="Stack"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "View Template Source"
 uri = "https://github.com/brettchalupa/godot_skeleton"
-
-[node name="PauseInstructions" type="Label" parent="Stack"]
-layout_mode = 2
-text = "Press START, P, or ESC to open pause menu."
-horizontal_alignment = 1
 
 [node name="Paused" parent="." instance=ExtResource("3_w8wrl")]
 visible = false
