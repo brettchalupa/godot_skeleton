@@ -11,6 +11,5 @@ func _input(event):
 		call_deferred("_pause")
 		
 func _pause():
-	print_debug("pause!")
 	$Paused.pause()
 	get_tree().paused = true
