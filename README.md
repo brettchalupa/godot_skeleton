@@ -1,6 +1,6 @@
 # Godot Skeleton
 
-Template repository for getting started with a new Godot project quickly. Godot Skeleton handles the boring stuff like main menu, pause menu, settings that persist and load from disk, and structuring your project.
+Template repository for getting started with a new Godot game quickly. Godot Skeleton handles the boring stuff like main menu, pause menu, settings that persist and load from disk, and structuring your project.
 
 Godot versions supported: 4.0+
 
@@ -8,6 +8,7 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 
 ## Bugs/Features
 
+- Main Menu, Settings, Gameplay, and Pause scenes
 - Mouse, keyboard, and controller support by default
 - Sensible defaults
 - Convention over configuration
@@ -17,6 +18,7 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 - Minimal yet stylish
 - Each scene has its own folder
 - Preconfigured exports for Web, Linux, macOS, and Windows
+- OS-aware menu options & settings
 - Build script for exports (requires Ruby and untested on Windows)
 - Automatically upload to itch.io if [butler](https://itch.io/docs/butler/) is installed
 
@@ -51,6 +53,10 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 - Joypad controls: Xbox config where bottom button is confirm
 - Settings config gets written to the userspace, [see the docs for details on the per-OS location](https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html#accessing-persistent-user-data-user)
 
+## Contribute
+
+You're welcome to contribute fixes and improvements to Godot Skeleton. If you find your needs differ widely, fork it and maintain your own template! That way you'll have it for your own future projects.
+
 ## Template License
 
 Godot Skeleton is dedicated to the public domain. Use it for your own projects with no need for credit or attribution or anything. [View the Unlicense for more details.](https://unlicense.org/)
@@ -79,4 +85,4 @@ The `export` script uses Ruby for now (sorry). Run it with:
 
 `godot` must be present in your environment as an executable for the script to work.
 
-If you configure `[itch]` in `export.cfg` with `user` (your handle) and `game` (your game slug), your builds will automatically get pushed to itch.io.
+If you configure `[itch]` in `export.cfg` with `user` (your handle) and `game` (your game slug) and have [butler](https://itch.io/docs/butler/) installed, your builds will automatically get pushed to itch.io.
