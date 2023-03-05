@@ -1,4 +1,7 @@
 extends VFlowContainer
 
 func _ready():
-	get_children()[0].grab_focus()
+	for child in get_children():
+		if child.visible:
+			child.grab_focus()
+			return
