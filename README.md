@@ -17,6 +17,8 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 - Minimal yet stylish
 - Each scene has its own folder
 - Preconfigured exports for Web, Linux, macOS, and Windows
+- Build script for exports
+- Automatically upload to itch.io if butler is installed
 
 ## Use It
 
@@ -29,6 +31,7 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 2. Configure exports
     - Change the bundle identifier for the MacOS export
     - Add or modify based on your game's needs
+3. Set up the `[itch]` sectionin `export_presets.cfg` for your game on itch.io
 
 ## Notes
 
@@ -65,3 +68,13 @@ Delete above and fill out your own README!
 0. Install Godot 4
 1. Clone the repository
 2. Open up `project.gdot`
+
+## Build Exports
+
+The `export` script uses Ruby for now (sorry). Run it with:
+
+``` console
+./export
+```
+
+If you configure `[itch]` in `export_presets.cfg` with `user` (your handle) and `game` (your game slug), your builds will automatically get pushed to itch.io.

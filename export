@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+require 'bundler/inline'
+gemfile do
+  source 'https://rubygems.org'
+  gem 'inifile', '~> 3.0'
+end
+
+exports = {}
+exports_cfg = IniFile.load("export_presets.cfg")
+
+exports_cfg.each_section do |section|
+  next if !section.include?("preset") || section.include?(".options")
+
+  sect = exports_cfg[section]
+  exports[sect["name"]] = {
+    "platform" => sect["platform"],
+    "export_path" => sect["export_path"],
+  }
+end
+
+exports.each do |k, v|
+  puts("Building export: #{k}")
+  if system("godot --headless --export-release \"#{k}\" #{v['export_path']}", exception: true)
+    puts("Success! Exported to: #{v['export_path']}")
+  else
+    puts("Failed to build: #{$?}")
+  end
+end
+
+itch_cfg = exports_cfg["itch"]
+if itch_cfg
+  if system("butler -V")
+    puts("itch.io butler installed, pushing builds")
+
+    exports.each do |k, v|
+      file = v['export_path'].strip
+      user = itch_cfg['user']
+      game = itch_cfg['game']
+      channel = v['platform'].downcase.gsub(" ", "-")
+
+      if channel == "web"
+        channel = "html"
+        file = "exports/game-web.zip"
+        system("zip #{file} #{v['export_path'].gsub('index.html', '*')}", exception: true)
+      end
+
+      puts("Pushing export to itch.io: #{k}")
+      butler_cmd = "butler push #{file} #{user}/#{game}:#{channel}"
+      if File.exists?(file)
+        if !system(butler_cmd, exception: true)
+          puts("Failed to push to itch.io: #{$?}")
+        end
+      end
+    end
+  else
+    abort("itch.io butler not installed")
+  end
+end
+
+puts("Export builds complete!")
