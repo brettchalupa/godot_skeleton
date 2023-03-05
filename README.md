@@ -17,7 +17,7 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 - Minimal yet stylish
 - Each scene has its own folder
 - Preconfigured exports for Web, Linux, macOS, and Windows
-- Build script for exports (requires Ruby)
+- Build script for exports (requires Ruby and untested on Windows)
 - Automatically upload to itch.io if [butler](https://itch.io/docs/butler/) is installed
 
 ## Use It
