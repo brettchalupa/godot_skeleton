@@ -33,11 +33,11 @@ exports.each do |k, v|
     if File.extname(v['export_path']) != ".zip"
       if v['platform'].downcase == "web"
         file = "exports/#{name_kebab}-web.zip"
-        system("zip #{file} #{v['export_path'].gsub('index.html', '*')}", exception: true)
+        system("zip #{file} -j #{v['export_path'].gsub('index.html', '*')}", exception: true)
         v['export_path'] = file
       else
         file = v['export_path'].gsub(File.extname(v['export_path']), '.zip')
-        system("zip #{file} #{v['export_path']}", exception: true)
+        system("zip #{file} -j #{v['export_path']}", exception: true)
         v['export_path'] = file
       end
     end
