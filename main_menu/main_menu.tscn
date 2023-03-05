@@ -12,6 +12,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -28.0
+offset_right = 1318.0
+offset_bottom = 758.0
+color = Color(0.227451, 0.368627, 0.521569, 1)
+
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
