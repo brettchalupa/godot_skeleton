@@ -2,6 +2,9 @@
 
 <img alt="Godot Skeleton logo with skull icon above" src="https://user-images.githubusercontent.com/928367/222969593-82cacc81-7867-413f-b45c-69a8e67a2a59.png" width="400">
 
+<img alt="Godot Skeleton logo with skull icon above" src="https://user-images.githubusercontent.com/928367/222971860-a291163b-7c4d-47c9-8260-73a439200768.png" width="600">
+
+
 [🎮 Check it out in your browser!](https://brettchalupa.itch.io/godot-skeleton)
 
 Template repository for getting started with a new Godot game quickly. Godot Skeleton handles the boring stuff like main menu, pause menu, settings that persist and load from disk, and structuring your project.
