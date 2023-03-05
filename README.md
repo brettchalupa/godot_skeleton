@@ -4,14 +4,12 @@
 
 <img alt="Godot Skeleton logo with skull icon above" src="https://user-images.githubusercontent.com/928367/222971860-a291163b-7c4d-47c9-8260-73a439200768.png" width="600">
 
-
-[🎮 Check it out in your browser!](https://brettchalupa.itch.io/godot-skeleton)
+[🎮 Check it out in your browser](https://brettchalupa.itch.io/godot-skeleton)
+[📺 Watch the demo](https://www.youtube.com/watch?v=kXY98csyvKM)
 
 Template repository for getting started with a new Godot game quickly. Godot Skeleton handles the boring stuff like main menu, pause menu, settings that persist and load from disk, and structuring your project.
 
 Godot versions supported: 4.0+
-
-_Note: Godot Skeleton is in its infancy. It works, but not much is documented and it'll be changing quickly._
 
 ## Bugs/Features
 
@@ -59,6 +57,8 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
         - Pause: Esc
 - Joypad controls: Xbox config where bottom button is confirm
 - Settings config gets written to the userspace, [see the docs for details on the per-OS location](https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html#accessing-persistent-user-data-user)
+
+_More to come as I make more games with Godot!_
 
 ## Contribute
 
