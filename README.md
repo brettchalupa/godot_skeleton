@@ -17,8 +17,8 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 - Minimal yet stylish
 - Each scene has its own folder
 - Preconfigured exports for Web, Linux, macOS, and Windows
-- Build script for exports
-- Automatically upload to itch.io if butler is installed
+- Build script for exports (requires Ruby)
+- Automatically upload to itch.io if [butler](https://itch.io/docs/butler/) is installed
 
 ## Use It
 
@@ -31,7 +31,7 @@ _Note: Godot Skeleton is in its infancy. It works, but not much is documented an
 2. Configure exports
     - Change the bundle identifier for the MacOS export
     - Add or modify based on your game's needs
-3. Set up the `[itch]` section in `deploy.cfg` for your game on itch.io
+3. Set up the `[itch]` section in `export.cfg` for your game on itch.io
 
 ## Notes
 
@@ -79,4 +79,4 @@ The `export` script uses Ruby for now (sorry). Run it with:
 
 `godot` must be present in your environment as an executable for the script to work.
 
-If you configure `[itch]` in `itch.cfg` with `user` (your handle) and `game` (your game slug), your builds will automatically get pushed to itch.io. You can specify the `version` too.
+If you configure `[itch]` in `export.cfg` with `user` (your handle) and `game` (your game slug), your builds will automatically get pushed to itch.io.

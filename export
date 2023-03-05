@@ -6,6 +6,11 @@ gemfile do
   gem 'inifile', '~> 3.0'
 end
 
+name = File.read("project.godot").split("\n")
+  .find { |l| l.include?("config/name") }
+  .split("=").last.gsub("\"", "")
+name_kebab = name.downcase.gsub(" ", "-").gsub(":", "")
+
 exports = {}
 exports_cfg = IniFile.load("export_presets.cfg")
 
@@ -15,7 +20,7 @@ exports_cfg.each_section do |section|
   sect = exports_cfg[section]
   exports[sect["name"]] = {
     "platform" => sect["platform"],
-    "export_path" => sect["export_path"],
+    "export_path" => sect["export_path"].gsub("game", name_kebab),
   }
 end
 
@@ -27,7 +32,7 @@ exports.each do |k, v|
     # compress exports that aren't
     if File.extname(v['export_path']) != ".zip"
       if v['platform'].downcase == "web"
-        file = "exports/game-web.zip"
+        file = "exports/#{name_kebab}-web.zip"
         system("zip #{file} #{v['export_path'].gsub('index.html', '*')}", exception: true)
         v['export_path'] = file
       else
@@ -41,8 +46,8 @@ exports.each do |k, v|
   end
 end
 
-deploy_cfg = IniFile.load("deploy.cfg")
-itch_cfg = deploy_cfg["itch"]
+export_cfg = IniFile.load("export.cfg")
+itch_cfg = export_cfg["itch"]
 if itch_cfg
   if system("butler -V")
     puts("itch.io butler installed, pushing builds")
@@ -51,18 +56,19 @@ if itch_cfg
       file = v['export_path'].strip
       user = itch_cfg['user']
       game = itch_cfg['game']
-      channel = v['platform'].downcase.gsub(" ", "-")
+      channel = v['platform'].downcase.gsub(" ", "-").gsub("/", "-")
 
       if channel == "web"
         channel = "html"
       end
 
-      puts("Pushing export to itch.io: #{k}")
       butler_cmd = "butler push #{file} #{user}/#{game}:#{channel}"
-      if ver = itch_cfg['version']
+      if ver = export_cfg['metadata']['version']
         butler_cmd += " --userversion #{ver}"
       end
       if File.exists?(file)
+        puts("Pushing export to itch.io: #{k}, #{file}")
+
         if !system(butler_cmd, exception: true)
           puts("Failed to push to itch.io: #{$?}")
         end
