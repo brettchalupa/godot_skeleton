@@ -9,5 +9,6 @@ func _resume():
 	get_parent().get_tree().paused = false
 
 func pause():
+	Sound.play_sfx($"../SelectSfx")
 	show()
 	$PauseOptions.focus()

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cee5dna3u27jf"]
+
+[ext_resource type="AudioStream" uid="uid://g7gd3wlypowd" path="res://assets/select.wav" id="1_rhp8p"]
+
+[node name="SelectSfx" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_rhp8p")
+volume_db = -10.0

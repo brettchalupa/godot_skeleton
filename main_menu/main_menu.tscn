@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://0268jtpuc6rp"]
+[gd_scene load_steps=5 format=3 uid="uid://0268jtpuc6rp"]
 
 [ext_resource type="Script" path="res://main_menu/MenuOptions.gd" id="1_qcgqq"]
 [ext_resource type="PackedScene" uid="uid://bdnyglk1i1cxl" path="res://gameplay/gameplay.tscn" id="2_5nvqq"]
 [ext_resource type="PackedScene" uid="uid://rxdgdijyhrsb" path="res://settings/settings.tscn" id="3_2osu0"]
+[ext_resource type="PackedScene" uid="uid://cee5dna3u27jf" path="res://assets/select_sfx.tscn" id="4_82nwe"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -96,6 +97,8 @@ text = "Settings"
 [node name="Quit" type="Button" parent="MenuOptions"]
 layout_mode = 2
 text = "Quit"
+
+[node name="SelectSfx" parent="MenuOptions" instance=ExtResource("4_82nwe")]
 
 [connection signal="pressed" from="MenuOptions/Start" to="MenuOptions" method="_on_start_pressed"]
 [connection signal="pressed" from="MenuOptions/Settings" to="MenuOptions" method="_on_settings_pressed"]

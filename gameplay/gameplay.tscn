@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdnyglk1i1cxl"]
+[gd_scene load_steps=5 format=3 uid="uid://bdnyglk1i1cxl"]
 
 [ext_resource type="Script" path="res://gameplay/gameplay.gd" id="1_thqv1"]
 [ext_resource type="Texture2D" uid="uid://bgprycbqd2tbx" path="res://assets/icon.svg" id="2_o7ako"]
 [ext_resource type="PackedScene" uid="uid://jadbqq0y2uot" path="res://paused/paused.tscn" id="3_w8wrl"]
+[ext_resource type="PackedScene" uid="uid://cee5dna3u27jf" path="res://assets/select_sfx.tscn" id="4_7kf0b"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_thqv1")
@@ -54,3 +55,6 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="SelectSfx" parent="." instance=ExtResource("4_7kf0b")]
+process_mode = 3

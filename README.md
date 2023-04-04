@@ -40,8 +40,8 @@ Godot versions supported: 4.0+
 
 1. Add a title to your game and change the credits
 2. Configure exports
-    - Change the bundle identifier for the MacOS export
-    - Add or modify based on your game's needs
+	- Change the bundle identifier for the MacOS export
+	- Add or modify based on your game's needs
 3. Set up the `[itch]` section in `export.cfg` for your game on itch.io
 
 ## Notes
@@ -49,19 +49,19 @@ Godot versions supported: 4.0+
 - Don't worry about keeping your game up to date with Godot Skeleton. It's intended to just be a starting point. When you use it again, it may have some improvements!
 - Gameplay defaults to a 2D scene, but you can easily change that for your game's needs.
 - Keyboard controls:
-    - Config I:
-        - Directional input: WASD
-        - Confirm: J
-        - Cancel: K
-        - Pause: P
-    - Config II:
-        - Directional input: Arrows
-        - Confirm: Z
-        - Cancel: X
-        - Pause: Esc
+	- Config I:
+		- Directional input: WASD
+		- Confirm: J
+		- Cancel: K
+		- Pause: P
+	- Config II:
+		- Directional input: Arrows
+		- Confirm: Z
+		- Cancel: X
+		- Pause: Esc
 - Joypad controls: Xbox config where bottom button is confirm
 - Settings config gets written to the userspace, [see the docs for details on the per-OS location](https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html#accessing-persistent-user-data-user)
-
+- Play sounds with `Sound.play_sfx(audio_stream_instance)` so that it respects the player's settings
 _More to come as I make more games with Godot!_
 
 ## Contribute
