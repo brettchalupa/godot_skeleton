@@ -20,6 +20,7 @@ Godot versions supported: 4.0+
 - Sensible defaults
 - Convention over configuration
 - Easy to change
+- Uses the Compatibility renderer by default for maximum compatibility; change the renderer as needed!
 - Ship quickly, ship often
 - Developed with all platforms in mind
 - Minimal yet stylish
