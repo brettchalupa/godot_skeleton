@@ -29,6 +29,7 @@ Godot versions supported: 4.0+
 - OS-aware menu options & settings
 - Build script for exports (requires Ruby and untested on Windows)
 - Automatically upload to itch.io if [butler](https://itch.io/docs/butler/) is installed
+- Web builds load slowly in Chrome and Firefox on macOS and don't work in Safari at all; this is an issue with Godot 4.0, [see this issue for more details](https://github.com/godotengine/godot/issues/70691)
 
 ## Use It
 
