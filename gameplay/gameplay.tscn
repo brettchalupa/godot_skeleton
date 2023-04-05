@@ -57,4 +57,3 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="SelectSfx" parent="." instance=ExtResource("4_7kf0b")]
-process_mode = 3

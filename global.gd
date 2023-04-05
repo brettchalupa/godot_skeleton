@@ -3,16 +3,19 @@ extends Node
 var play_sfx = true
 var play_music = true
 var fullscreen = false
+var version = null
 const SCENE_MAIN_MENU = "res://main_menu/main_menu.tscn"
-
-const SETTINGS_FILE = "user://settings.cfg"
-const CONFIG_SETTINGS_SECTION = "settings"
+const EXPORT_CONFIG_FILE := "res://export.cfg"
+const EXPORT_CONFIG_METADATA_SECTION := "metadata"
+const SETTINGS_FILE := "user://settings.cfg"
+const CONFIG_SETTINGS_SECTION := "settings"
 
 func _ready():
 	print_debug("Global ready")
 	Engine.max_fps = 60
 	load_settings()
-	
+	load_game_metadata()
+
 func load_settings():
 	var config = ConfigFile.new()
 	var load_res = config.load(SETTINGS_FILE)
@@ -50,3 +53,13 @@ func set_setting(setting, val, save := true):
 
 	if save:
 		save_settings()
+
+func load_game_metadata():
+	var config := ConfigFile.new()
+	var load_res := config.load(EXPORT_CONFIG_FILE)
+
+	if load_res != OK:
+		print("failed to load game metadata")
+		return
+
+	version = config.get_value(EXPORT_CONFIG_METADATA_SECTION, "version")

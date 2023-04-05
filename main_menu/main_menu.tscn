@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://0268jtpuc6rp"]
+[gd_scene load_steps=6 format=3 uid="uid://0268jtpuc6rp"]
 
+[ext_resource type="Script" path="res://main_menu/version_label.gd" id="1_5huni"]
 [ext_resource type="Script" path="res://main_menu/MenuOptions.gd" id="1_qcgqq"]
 [ext_resource type="PackedScene" uid="uid://bdnyglk1i1cxl" path="res://gameplay/gameplay.tscn" id="2_5nvqq"]
 [ext_resource type="PackedScene" uid="uid://rxdgdijyhrsb" path="res://settings/settings.tscn" id="3_2osu0"]
@@ -67,6 +68,16 @@ offset_right = 365.0
 offset_bottom = 674.0
 text = "INSTRUCTIONS
 Collect all the things!"
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 20.0
+offset_right = 1258.0
+offset_bottom = 46.0
+text = "Version: [set dynamically]"
+horizontal_alignment = 2
+script = ExtResource("1_5huni")
 
 [node name="MenuOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
