@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://rxdgdijyhrsb"]
+[gd_scene load_steps=6 format=3 uid="uid://dpicmplffpula"]
 
-[ext_resource type="Script" path="res://settings/SettingsControls.gd" id="1_mmaky"]
-[ext_resource type="Script" path="res://settings/FullscreenToggle.gd" id="2_5l5tc"]
-[ext_resource type="Script" path="res://settings/SfxToggle.gd" id="3_n6nlb"]
-[ext_resource type="Script" path="res://settings/MusicToggle.gd" id="4_s1svy"]
-[ext_resource type="Script" path="res://settings/BackButton.gd" id="5_x47bl"]
+[ext_resource type="Script" path="res://settings/settings_controls.gd" id="1_n5jcg"]
+[ext_resource type="Script" path="res://settings/fullscreen_toggle.gd" id="2_xaxe3"]
+[ext_resource type="Script" path="res://settings/sfx_toggle.gd" id="3_ojkp7"]
+[ext_resource type="Script" path="res://settings/music_toggle.gd" id="4_0gokw"]
+[ext_resource type="Script" path="res://settings/back_button.gd" id="5_uk7ws"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -66,27 +66,27 @@ grow_horizontal = 2
 grow_vertical = 2
 shortcut_context = NodePath("")
 alignment = 1
-script = ExtResource("1_mmaky")
+script = ExtResource("1_n5jcg")
 
 [node name="FullscreenToggle" type="CheckButton" parent="SettingsControls"]
 layout_mode = 2
 text = "Fullscreen"
-script = ExtResource("2_5l5tc")
+script = ExtResource("2_xaxe3")
 
 [node name="SfxToggle" type="CheckButton" parent="SettingsControls"]
 layout_mode = 2
 text = "Sound Effects"
-script = ExtResource("3_n6nlb")
+script = ExtResource("3_ojkp7")
 
 [node name="MusicToggle" type="CheckButton" parent="SettingsControls"]
 layout_mode = 2
 text = "Music"
-script = ExtResource("4_s1svy")
+script = ExtResource("4_0gokw")
 
 [node name="BackButton" type="Button" parent="SettingsControls"]
 layout_mode = 2
 text = "Back"
-script = ExtResource("5_x47bl")
+script = ExtResource("5_uk7ws")
 
 [connection signal="toggled" from="SettingsControls/FullscreenToggle" to="SettingsControls/FullscreenToggle" method="_on_toggled"]
 [connection signal="toggled" from="SettingsControls/SfxToggle" to="SettingsControls/SfxToggle" method="_on_toggled"]

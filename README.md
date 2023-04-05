@@ -69,6 +69,18 @@ _More to come as I make more games with Godot!_
 
 You're welcome to contribute fixes and improvements to Godot Skeleton. If you find your needs differ widely, fork it and maintain your own template! That way you'll have it for your own future projects.
 
+### Style Guide
+
+Here are my preferences when working on Godot projects and organizing files and nodes.
+
+- Name all files (scripts, scenes, etc.) using snake case - `main_menu`
+- Name all nodes in a scene using Pascal case - `MenuOption`
+- Use `snake_case` for all GDScript variables and functions
+- Use `SCREAMING_SNAKE_CASE` for all constants
+- Prefer static typing over dynamic typing
+
+I try to follow these the best I can.
+
 ## Template License
 
 Godot Skeleton is dedicated to the public domain. Use it for your own projects with no need for credit or attribution or anything. [View the Unlicense for more details.](https://unlicense.org/)
