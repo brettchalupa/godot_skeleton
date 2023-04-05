@@ -79,6 +79,15 @@ text = "Version: [set dynamically]"
 horizontal_alignment = 2
 script = ExtResource("1_5huni")
 
+[node name="DebugUIStatus" type="Label" parent="." groups=["debug_ui"]]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 23.0
+offset_right = 162.0
+offset_bottom = 49.0
+text = "Debug UI enabled"
+
 [node name="MenuOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
 anchors_preset = 13

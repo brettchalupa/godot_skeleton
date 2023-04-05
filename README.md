@@ -63,6 +63,8 @@ Godot versions supported: 4.0+
 - Settings config gets written to the userspace, [see the docs for details on the per-OS location](https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html#accessing-persistent-user-data-user)
 - Play sounds with `Sound.play_sfx(audio_stream_instance)` so that it respects the player's settings
 - Play music with `Sound.play_music(audio_stream_instance)` so that it respects the player's settings
+- Add nodes to the `debug_ui` group to toggle their visibility in debug builds with the <kbd>0</kbd> key
+
 _More to come as I make more games with Godot!_
 
 ## Contribute

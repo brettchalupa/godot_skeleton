@@ -4,6 +4,7 @@ var play_sfx = true
 var play_music = true
 var fullscreen = false
 var version = null
+var show_debug_ui = false
 const SCENE_MAIN_MENU = "res://main_menu/main_menu.tscn"
 const EXPORT_CONFIG_FILE := "res://export.cfg"
 const EXPORT_CONFIG_METADATA_SECTION := "metadata"
@@ -15,6 +16,9 @@ func _ready() -> void:
 	Engine.max_fps = 60
 	load_settings()
 	load_game_metadata()
+	
+	# hidden by default, can be toggled on in debug mode
+	get_tree().call_group("debug_ui", "hide")
 
 func load_settings() -> void:
 	var config = ConfigFile.new()
@@ -64,3 +68,12 @@ func load_game_metadata() -> void:
 		return
 
 	version = config.get_value(EXPORT_CONFIG_METADATA_SECTION, "version")
+
+func _input(event: InputEvent) -> void:
+	if OS.is_debug_build() and event.is_action_pressed("debug_toggle_ui"):
+		show_debug_ui = !show_debug_ui
+		print_debug("debug UI toggled: " + str(show_debug_ui))
+		if show_debug_ui:
+			get_tree().call_group("debug_ui", "show")
+		else:
+			get_tree().call_group("debug_ui", "hide")
