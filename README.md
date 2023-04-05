@@ -62,6 +62,7 @@ Godot versions supported: 4.0+
 - Joypad controls: Xbox config where bottom button is confirm
 - Settings config gets written to the userspace, [see the docs for details on the per-OS location](https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html#accessing-persistent-user-data-user)
 - Play sounds with `Sound.play_sfx(audio_stream_instance)` so that it respects the player's settings
+- Play music with `Sound.play_music(audio_stream_instance)` so that it respects the player's settings
 _More to come as I make more games with Godot!_
 
 ## Contribute
