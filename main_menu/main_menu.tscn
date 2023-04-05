@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://0268jtpuc6rp"]
+[gd_scene load_steps=6 format=3 uid="uid://j87n4lychbt5"]
 
-[ext_resource type="Script" path="res://main_menu/MenuOptions.gd" id="1_qcgqq"]
+[ext_resource type="Script" path="res://main_menu/version_label.gd" id="1_5huni"]
 [ext_resource type="PackedScene" uid="uid://bdnyglk1i1cxl" path="res://gameplay/gameplay.tscn" id="2_5nvqq"]
-[ext_resource type="PackedScene" uid="uid://rxdgdijyhrsb" path="res://settings/settings.tscn" id="3_2osu0"]
+[ext_resource type="Script" path="res://main_menu/menu_options.gd" id="2_gpv3d"]
+[ext_resource type="PackedScene" uid="uid://dpicmplffpula" path="res://settings/settings.tscn" id="3_2osu0"]
+[ext_resource type="PackedScene" uid="uid://cee5dna3u27jf" path="res://assets/select_sfx.tscn" id="4_82nwe"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -67,6 +69,25 @@ offset_bottom = 674.0
 text = "INSTRUCTIONS
 Collect all the things!"
 
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 20.0
+offset_right = 1258.0
+offset_bottom = 46.0
+text = "Version: [set dynamically]"
+horizontal_alignment = 2
+script = ExtResource("1_5huni")
+
+[node name="DebugUIStatus" type="Label" parent="." groups=["debug_ui"]]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 23.0
+offset_right = 162.0
+offset_bottom = 49.0
+text = "Debug UI enabled"
+
 [node name="MenuOptions" type="VFlowContainer" parent="." node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
 anchors_preset = 13
@@ -81,7 +102,7 @@ grow_horizontal = 2
 grow_vertical = 2
 shortcut_context = NodePath("Start")
 alignment = 1
-script = ExtResource("1_qcgqq")
+script = ExtResource("2_gpv3d")
 gameplay_scene = ExtResource("2_5nvqq")
 settings_scene = ExtResource("3_2osu0")
 
@@ -96,6 +117,8 @@ text = "Settings"
 [node name="Quit" type="Button" parent="MenuOptions"]
 layout_mode = 2
 text = "Quit"
+
+[node name="SelectSfx" parent="MenuOptions" instance=ExtResource("4_82nwe")]
 
 [connection signal="pressed" from="MenuOptions/Start" to="MenuOptions" method="_on_start_pressed"]
 [connection signal="pressed" from="MenuOptions/Settings" to="MenuOptions" method="_on_settings_pressed"]

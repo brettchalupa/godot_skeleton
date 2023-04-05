@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://jadbqq0y2uot"]
+[gd_scene load_steps=3 format=3 uid="uid://cko02oljhiby"]
 
 [ext_resource type="Script" path="res://paused/paused.gd" id="1_n0tpy"]
-[ext_resource type="Script" path="res://paused/Options.gd" id="2_s1e5n"]
+[ext_resource type="Script" path="res://paused/options.gd" id="2_iq4em"]
 
 [node name="Paused" type="Control"]
 process_mode = 2
@@ -47,7 +47,7 @@ offset_right = 721.0
 offset_bottom = 714.0
 shortcut_context = NodePath("Resume")
 alignment = 1
-script = ExtResource("2_s1e5n")
+script = ExtResource("2_iq4em")
 metadata/_edit_group_ = true
 
 [node name="Resume" type="Button" parent="PauseOptions"]
