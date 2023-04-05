@@ -10,13 +10,13 @@ const EXPORT_CONFIG_METADATA_SECTION := "metadata"
 const SETTINGS_FILE := "user://settings.cfg"
 const CONFIG_SETTINGS_SECTION := "settings"
 
-func _ready():
+func _ready() -> void:
 	print_debug("Global ready")
 	Engine.max_fps = 60
 	load_settings()
 	load_game_metadata()
 
-func load_settings():
+func load_settings() -> void:
 	var config = ConfigFile.new()
 	var load_res = config.load(SETTINGS_FILE)
 
@@ -29,14 +29,14 @@ func load_settings():
 
 ## persist all settings to disk
 ## add a new setting in the array to ensure it persists
-func save_settings():
+func save_settings() -> void:
 	var config = ConfigFile.new()
 	for setting in ["fullscreen", "play_sfx", "play_music"]:
 		config.set_value(CONFIG_SETTINGS_SECTION, setting, self[setting])
 	config.save(SETTINGS_FILE)
 
 ## val is a bool representing whether or not to toggle on fullscreen
-func set_fullscreen(val:bool):
+func set_fullscreen(val: bool) -> void:
 	fullscreen = val
 	if fullscreen:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
@@ -46,7 +46,7 @@ func set_fullscreen(val:bool):
 ## Assigns the value to the Global setting variable.
 ## Defaults to saving all settings after one gets set, but can be disabled
 ## with the `save` argument.
-func set_setting(setting, val, save := true):
+func set_setting(setting: String, val, save := true) -> void:
 	self[setting] = val
 	if setting == "fullscreen":
 		set_fullscreen(val)
@@ -54,7 +54,8 @@ func set_setting(setting, val, save := true):
 	if save:
 		save_settings()
 
-func load_game_metadata():
+## sets the version property from the export.cfg file
+func load_game_metadata() -> void:
 	var config := ConfigFile.new()
 	var load_res := config.load(EXPORT_CONFIG_FILE)
 
