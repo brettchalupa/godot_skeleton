@@ -66,7 +66,7 @@ if itch_cfg
       if ver = export_cfg['metadata']['version']
         butler_cmd += " --userversion #{ver}"
       end
-      if File.exists?(file)
+      if File.exist?(file)
         puts("Pushing export to itch.io: #{k}, #{file}")
 
         if !system(butler_cmd, exception: true)
