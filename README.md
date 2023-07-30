@@ -9,7 +9,7 @@
 
 Template repository for getting started with a new Godot game quickly. Godot Skeleton handles the boring stuff like main menu, pause menu, settings that persist and load from disk, and structuring your project.
 
-[Support the continued development of Godot Skeleton.](https://www.patreon.com/brettchalupa)
+[Support the continued development of Godot Skeleton.](https://www.buymeacoffee.com/brettchalupa)
 
 Godot versions supported: 4.0+
 
